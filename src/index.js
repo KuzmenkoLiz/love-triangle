@@ -4,4 +4,12 @@
  */
 module.exports = function getLoveTrianglesCount(preferences = []) {
   // your implementation
+  var numberOfTr = 0;
+
+  for( var i=0; i<preferences.length; i++){
+    if( i+1 === preferences[preferences[preferences[i]-1]-1])
+    numberOfTr++;
+  }
+
+  return parseInt(numberOfTr/3);
 };
